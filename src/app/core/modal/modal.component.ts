@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from 'ng-uikit-pro-standard';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
