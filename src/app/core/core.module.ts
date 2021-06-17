@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modal/modal.component';
-import {IconsModule, ModalModule} from "angular-bootstrap-md";
-import {InputUtilitiesModule} from "ng-uikit-pro-standard";
 import {ReactiveFormsModule} from "@angular/forms";
+import {IconsModule} from "angular-bootstrap-md";
 
 
 
@@ -17,10 +16,8 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     CommonModule,
-    IconsModule,
-    InputUtilitiesModule,
-    ModalModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ],
   exports: [
     HeaderComponent,

@@ -8,18 +8,24 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  loginForm: FormGroup;
 
-  public loginForm: FormGroup;
-
-  constructor(public modalRef: MDBModalRef,
-              private formBuilder: FormBuilder,
-              ) {  }
+  constructor(
+    public modalRef: MDBModalRef,
+    private fB: FormBuilder,
+    // private formBuilder: FormBuilder,
+              ) {
+    this.loginForm = fB.group({
+      mail: [''],
+      password: [''],
+    })
+  }
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required]],
-      password: ['', [Validators.required]]
-    });
+    // this.loginForm = this.formBuilder.group({
+    //   email: ['', [Validators.required]],
+    //   password: ['', [Validators.required]]
+    // });
 
     // this.validatingForm = new FormGroup({
     //   loginFormModalEmail: new FormControl('', Validators.email),
