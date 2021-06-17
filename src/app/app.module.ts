@@ -3,16 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HomeComponent } from './home/home.component';
+import {CoreModule} from "./core/core.module";
+import {ModalComponent} from "./core/modal/modal.component";
+import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
+import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    // ModalComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModulesPro.forRoot(),
   ],
-  providers: [],
+  providers: [MDBSpinningPreloader],
+  entryComponents: [ ModalComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

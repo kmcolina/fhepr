@@ -1,0 +1,25 @@
+/* Navbar animation */
+.navbar {
+  background-color: #343434;
+}
+
+.brand-logo {
+  max-height: 40px;
+  padding: 0.2rem;
+}
+
+.buttonNav {
+  color: #fff;
+}
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #343434; } }
+
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #343434!important;
+  }
+}

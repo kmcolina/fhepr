@@ -1,0 +1,42 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 650px;
+  }
+}
+
+//.top-nav-collapse {
+//  background-color: #1C2331; }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #343434; }
+
+full-page-intro {
+  height: 100vh !important;
+}
+
+.heroImg {
+  background-image: url('/assets/img/fondoHero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh
+}
