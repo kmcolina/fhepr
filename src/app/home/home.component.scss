@@ -47,3 +47,18 @@ full-page-intro {
   padding: 0;
   height: 25px;
 }
+
+.containerLeft {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.innerContainer {
+  width: 100%;
+  align-self: center;
+}
+
+.name_Last {
+  margin: 0;
+}

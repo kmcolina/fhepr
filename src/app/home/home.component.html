@@ -9,18 +9,23 @@
     <div class="container">
 
       <!--Grid row-->
-      <div class="row wow fadeIn">
+      <div class="row wow fadeIn mt-5">
 
         <!--Grid column-->
         <div class="col-md-6 mb-4 white-text text-center text-md-left">
+          <div class="container containerLeft">
+            <div class="innerContainer">
+              <h1 class="display-4 font-weight-bold">Bienvenidos al <br> Banco Karan</h1>
 
-          <h1 class="display-4 font-weight-bold">Bienvenidos al <br> Banco Karan</h1>
+              <hr class="hr-light">
 
-          <hr class="hr-light">
+              <p class="mb-4 d-md-block">
+                <strong>Aca creamos una descripcion de nuestro banco.</strong>
+              </p>
 
-          <p class="mb-4 d-md-block">
-            <strong>Aca creamos una descripcion de nuestro banco.</strong>
-          </p>
+            </div>
+          </div>
+
 
         </div>
         <!--Grid column-->
@@ -47,17 +52,27 @@
                   <input type="text" formControlName="user" class="form-control" mdbInput placeholder="Usuario">
                 </div>
                 <div class="md-form">
-                  <i class="fas fa-user prefix grey-text"></i>
+                  <i class="fas fa-lock prefix grey-text"></i>
                   <input type="password" formControlName="password" class="form-control" mdbInput placeholder="Clave">
                 </div>
-                <div class="md-form">
-                  <i class="fas fa-user prefix grey-text"></i>
-                  <input type="text" formControlName="name" class="form-control" mdbInput placeholder="Nombre">
+
+                <div class="row">
+                  <div class="col">
+                    <div class="md-form name_Last">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="text" formControlName="name" class="form-control" mdbInput placeholder="Nombre">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="md-form name_Last">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="text" formControlName="lastName" class="form-control" mdbInput placeholder="Apellido">
+                    </div>
+                  </div>
                 </div>
-                <div class="md-form">
-                  <i class="fas fa-user prefix grey-text"></i>
-                  <input type="text" formControlName="lastName" class="form-control" mdbInput placeholder="Apellido">
-                </div>
+
+
+
                 <div class="md-form">
                   <i class="fas fa-address-card prefix grey-text"></i>
                   <input type="text" formControlName="cid" class="form-control" mdbInput placeholder="Cédula">
