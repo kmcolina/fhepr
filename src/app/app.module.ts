@@ -9,6 +9,7 @@ import {CoreModule} from "./core/core.module";
 import {ModalComponent} from "./core/modal/modal.component";
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
     HomeComponent,
     // ModalComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule,
-    MDBBootstrapModule.forRoot(),
-    MDBBootstrapModulesPro.forRoot(),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CoreModule,
+        MDBBootstrapModule.forRoot(),
+        MDBBootstrapModulesPro.forRoot(),
+        ReactiveFormsModule,
+    ],
   providers: [MDBSpinningPreloader],
   entryComponents: [ ModalComponent ],
   bootstrap: [AppComponent]

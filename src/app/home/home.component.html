@@ -1,6 +1,5 @@
-
-
 <!-- Full Page Intro -->
+
 <div class="view full-page-intro heroImg">
 
   <!-- Mask & flexbox options-->
@@ -36,46 +35,46 @@
             <div class="card-body">
 
               <!-- Form -->
-              <form name="">
+              <form [formGroup]="registerForm" >
                 <!-- Heading -->
                 <h3 class="dark-grey-text text-center">
                   <strong>Empieza con nosotros</strong>
                 </h3>
                 <hr>
-
+                <!--Inputs-->
                 <div class="md-form">
                   <i class="fas fa-user prefix grey-text"></i>
-                  <input type="text" id="form1" class="form-control">
-                  <label for="form1">Nombre</label>
+                  <input type="text" formControlName="user" class="form-control" mdbInput placeholder="Usuario">
                 </div>
                 <div class="md-form">
                   <i class="fas fa-user prefix grey-text"></i>
-                  <input type="text" id="form3" class="form-control">
-                  <label for="form3">Apellido</label>
+                  <input type="password" formControlName="password" class="form-control" mdbInput placeholder="Clave">
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" formControlName="name" class="form-control" mdbInput placeholder="Nombre">
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" formControlName="lastName" class="form-control" mdbInput placeholder="Apellido">
                 </div>
                 <div class="md-form">
                   <i class="fas fa-address-card prefix grey-text"></i>
-                  <input type="text" id="form2" class="form-control">
-                  <label for="form2">Cédula/Rif</label>
+                  <input type="text" formControlName="cid" class="form-control" mdbInput placeholder="Cédula">
                 </div>
                 <div class="md-form">
                   <i class="fas fa-envelope prefix grey-text"></i>
-                  <input type="text" id="form4" class="form-control">
-                  <label for="form4">Correo</label>
+                  <input type="email" formControlName="email" class="form-control" mdbInput placeholder="Correo">
                 </div>
                 <div class="form-check align-middle">
-                  <fieldset class="form-check">
-                    <input
-                      mdbCheckbox
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="tipoCuenta"
-                    />
-                    <label class="form-check-label prefix grey-text" for="flexCheckDefault">
+                  <div class="row">
+                    <div class="col-2 offset-2">
+                      <input type="checkbox" formControlName="juridica" class="checkboxReg form-control" mdbInput>
+                    </div>
+                    <div class="col-6 grey-text d-flex align-content-center">
                       ¿Es cuenta juridica?
-                    </label>
-                  </fieldset>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="text-center" style="margin-top: 1rem">
@@ -106,84 +105,84 @@
 <!-- Full Page Intro -->
 
 <!--Main layout-->
-<main>
-  <div class="container">
+<!--<main>-->
+<!--  <div class="container">-->
 
-    <hr class="my-5">
+<!--    <hr class="my-5">-->
 
-    <!--Section: Main features & Quick Start-->
-    <section>
+<!--    &lt;!&ndash;Section: Main features & Quick Start&ndash;&gt;-->
+<!--    <section>-->
 
-      <h3 class="h3 text-center mb-5">About MDB</h3>
+<!--      <h3 class="h3 text-center mb-5">About MDB</h3>-->
 
-      <!--Grid row-->
-      <div class="row wow fadeIn">
+<!--      &lt;!&ndash;Grid row&ndash;&gt;-->
+<!--      <div class="row wow fadeIn">-->
 
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 px-4">
+<!--        &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--        <div class="col-lg-6 col-md-12 px-4">-->
 
-          <!--First row-->
-          <div class="row">
-            <div class="col-1 mr-3">
-              <i class="fas fa-code fa-2x indigo-text"></i>
-            </div>
-            <div class="col-10">
-              <h5 class="feature-title">Bootstrap 4</h5>
-              <p class="grey-text">Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.</p>
-            </div>
-          </div>
-          <!--/First row-->
+<!--          &lt;!&ndash;First row&ndash;&gt;-->
+<!--          <div class="row">-->
+<!--            <div class="col-1 mr-3">-->
+<!--              <i class="fas fa-code fa-2x indigo-text"></i>-->
+<!--            </div>-->
+<!--            <div class="col-10">-->
+<!--              <h5 class="feature-title">Bootstrap 4</h5>-->
+<!--              <p class="grey-text">Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;/First row&ndash;&gt;-->
 
-          <div style="height:30px"></div>
+<!--          <div style="height:30px"></div>-->
 
-          <!--Second row-->
-          <div class="row">
-            <div class="col-1 mr-3">
-              <i class="fas fa-book fa-2x blue-text"></i>
-            </div>
-            <div class="col-10">
-              <h5 class="feature-title">Detailed documentation</h5>
-              <p class="grey-text">We give you detailed user-friendly documentation at your disposal. It will help you to implement your ideas
-                easily.
-              </p>
-            </div>
-          </div>
-          <!--/Second row-->
+<!--          &lt;!&ndash;Second row&ndash;&gt;-->
+<!--          <div class="row">-->
+<!--            <div class="col-1 mr-3">-->
+<!--              <i class="fas fa-book fa-2x blue-text"></i>-->
+<!--            </div>-->
+<!--            <div class="col-10">-->
+<!--              <h5 class="feature-title">Detailed documentation</h5>-->
+<!--              <p class="grey-text">We give you detailed user-friendly documentation at your disposal. It will help you to implement your ideas-->
+<!--                easily.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;/Second row&ndash;&gt;-->
 
-          <div style="height:30px"></div>
+<!--          <div style="height:30px"></div>-->
 
-          <!--Third row-->
-          <div class="row">
-            <div class="col-1 mr-3">
-              <i class="fas fa-graduation-cap fa-2x cyan-text"></i>
-            </div>
-            <div class="col-10">
-              <h5 class="feature-title">Lots of tutorials</h5>
-              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
-                how to use MDB as well as other technologies.</p>
-            </div>
-          </div>
-          <!--/Third row-->
+<!--          &lt;!&ndash;Third row&ndash;&gt;-->
+<!--          <div class="row">-->
+<!--            <div class="col-1 mr-3">-->
+<!--              <i class="fas fa-graduation-cap fa-2x cyan-text"></i>-->
+<!--            </div>-->
+<!--            <div class="col-10">-->
+<!--              <h5 class="feature-title">Lots of tutorials</h5>-->
+<!--              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn-->
+<!--                how to use MDB as well as other technologies.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;/Third row&ndash;&gt;-->
 
-        </div>
-        <!--/Grid column-->
+<!--        </div>-->
+<!--        &lt;!&ndash;/Grid column&ndash;&gt;-->
 
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12">
+<!--        &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--        <div class="col-lg-6 col-md-12">-->
 
-          <p class="h5 text-center mb-4">Watch our "5 min Quick Start" tutorial</p>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>
-          </div>
-        </div>
-        <!--/Grid column-->
+<!--          <p class="h5 text-center mb-4">Watch our "5 min Quick Start" tutorial</p>-->
+<!--          <div class="embed-responsive embed-responsive-16by9">-->
+<!--            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;/Grid column&ndash;&gt;-->
 
-      </div>
-      <!--/Grid row-->
+<!--      </div>-->
+<!--      &lt;!&ndash;/Grid row&ndash;&gt;-->
 
-    </section>
-    <!--Section: Main features & Quick Start-->
+<!--    </section>-->
+<!--    &lt;!&ndash;Section: Main features & Quick Start&ndash;&gt;-->
 
-  </div>
-</main>
+<!--  </div>-->
+<!--</main>-->
 <!--Main layout-->

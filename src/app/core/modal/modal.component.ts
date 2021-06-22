@@ -22,24 +22,6 @@ export class ModalComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    // this.loginForm = this.formBuilder.group({
-    //   email: ['', [Validators.required]],
-    //   password: ['', [Validators.required]]
-    // });
-
-    // this.validatingForm = new FormGroup({
-    //   loginFormModalEmail: new FormControl('', Validators.email),
-    //   loginFormModalPassword: new FormControl('', Validators.required)
-    // });
-  }
-
-  // get loginFormModalEmail() {
-  //   return this.validatingForm.get('email');
-  // }
-  //
-  // get loginFormModalPassword() {
-  //   return this.validatingForm.get('loginFormModalPassword');
-  // }
+  ngOnInit(): void { }
 
 }
