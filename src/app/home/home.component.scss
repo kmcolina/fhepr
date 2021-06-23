@@ -62,3 +62,29 @@ full-page-intro {
 .name_Last {
   margin: 0;
 }
+
+.cartaConocenos{
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.3);
+  border-color: #707070;
+  //opacity: 30%;
+  padding: 2.5rem;
+
+  h2, p {
+    text-align: justify;
+    color: #707070;
+  }
+}
+
+.titleSection {
+  color: #707070;
+}
+
+.sectionConocenos{
+  background: rgb(255,255,255);
+  background: linear-gradient(
+      326deg
+    , rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(192,248,227,1) 32%, rgba(193,248,228,1)
+    64%, rgba(206,250,233,1) 100%, rgba(255,255,255,1) 100%);
+}
+
