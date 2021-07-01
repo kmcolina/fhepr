@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
     private alerts: AlertsService,
   ) {
     this.registerForm = fB.group({
-      user: [''],
-      password: [''],
-      name: [''],
-      lastName: [''],
+      user: ['',Validators.minLength(6)],
+      password: ['', Validators.minLength(8)],
+      name: ['', Validators.minLength(2)],
+      lastName: ['', Validators.minLength(2)],
       email: [''],
-      dni: [''],
+      dni: ['', Validators.minLength(2)],
       juridica: [false],
     });
     this.dataRegister = this.fB.group({
@@ -44,6 +44,38 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  registrarError(error: [type: string, msg: any]) {
+    let tipo;
+    let msg;
+    if (error[0] === 'username') {
+      tipo = 'Usuario ';
+    } else if (error[0] === 'email') {
+      tipo = 'Correo ';
+    } else if (error[0] === 'dni') {
+      tipo = 'Cédula ';
+    } else if (error[0] === 'first_name') {
+      tipo = 'Nombre ';
+    } else if (error[0] === 'last_name') {
+      tipo = 'Apellido ';
+    } else {
+      tipo = 'Contraseña ';
+    }
+
+    const msgAux = error[1].toString();
+    if (msgAux === "This field must be unique.") {
+      msg = "ya existe, intente otro diferente";
+    } else if (msgAux === "Enter a valid email address") {
+      msg = "ya esta registrado";
+    } else if (msgAux.indexOf("characters") !== -1) {
+      msg = "es muy corto"
+    } else {
+      msg = "es invalido"
+    }
+
+    return tipo + msg;
+  }
+
+
   registrarUsuario () {
     this.dataRegister = this.fB.group({
         email: [this.registerForm.value.email],
@@ -58,23 +90,39 @@ export class HomeComponent implements OnInit {
     if(this.registerForm.value.juridica){
       const aux = this.karanApiService.registerJuridico(this.dataRegister.value);
       aux.subscribe((data:any)=>{
-        //Dependiendo de la respuesta mostrar la alerta.
         if (data !== null) {
           this.alerts.showAlerts('Registro Con Exito!', 'success', 'Ahora puede acceder a su cuenta.');
-        }else{
-          this.alerts.showAlerts('Ups!', 'error', 'Revisa bien los campos');
         }
-      })
+      },
+        (error)=>{
+          let errors: any = [];
+          Object.entries(error.error).map((item)=>{
+            if(item[0]==="password_confirmation"){
+              return;
+            }
+            errors.push(this.registrarError(item))
+          })
+          this.alerts.showAlerts('Ups!', 'error', `${errors.join(", ").toString()}`);
+        }
+      )
     }else{
       const aux = this.karanApiService.registerNatural(this.dataRegister.value);
-      // console.log('aux', aux);
       aux.subscribe((data:any)=>{
         if (data !== null) {
           this.alerts.showAlerts('Registro Con Exito!', 'success', 'Ahora puede acceder a su cuenta.');
-        }else{
-          this.alerts.showAlerts('Ups!', 'error', 'Revisa bien los campos');
         }
-      })
+      },
+      (error)=>{
+          let errors: any = [];
+          Object.entries(error.error).map((item)=>{
+            if(item[0]==="password_confirmation"){
+              return;
+            }
+            errors.push(this.registrarError(item))
+          })
+          this.alerts.showAlerts('Ups!', 'error', `${errors.join(", ").toString()}`);
+        }
+      )
     }
 
   }

@@ -33,4 +33,9 @@ export class KaranApiService {
   "password" : "andres1234",
   "password_confirmation" : "andres1234"
 }
+
+email: ["Enter a valid email address."]
+password: ["Ensure this field has at least 8 characters."]
+password_confirmation: ["Ensure this field has at least 8 characters."]
+username: ["This field must be unique."]
 */
