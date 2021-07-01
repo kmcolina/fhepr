@@ -75,7 +75,7 @@
 
                 <div class="md-form">
                   <i class="fas fa-address-card prefix grey-text"></i>
-                  <input type="text" formControlName="cid" class="form-control" mdbInput placeholder="Cédula">
+                  <input type="text" formControlName="dni" class="form-control" mdbInput placeholder="Cédula">
                 </div>
                 <div class="md-form">
                   <i class="fas fa-envelope prefix grey-text"></i>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="text-center" style="margin-top: 1rem">
-                  <button class="btn buttonKaranPrimary">Registrarse</button>
+                  <button class="btn buttonKaranPrimary" (click)="registrarUsuario()">Registrarse</button>
                 </div>
 
               </form>
