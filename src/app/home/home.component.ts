@@ -59,14 +59,21 @@ export class HomeComponent implements OnInit {
       const aux = this.karanApiService.registerJuridico(this.dataRegister.value);
       aux.subscribe((data:any)=>{
         //Dependiendo de la respuesta mostrar la alerta.
-        // this.alerts.showAlerts('Registro Con Exito!', 'success', 'Ahora puede acceder a su cuenta.');
-        console.log(data);
+        if (data !== null) {
+          this.alerts.showAlerts('Registro Con Exito!', 'success', 'Ahora puede acceder a su cuenta.');
+        }else{
+          this.alerts.showAlerts('Ups!', 'error', 'Revisa bien los campos');
+        }
       })
     }else{
       const aux = this.karanApiService.registerNatural(this.dataRegister.value);
-      console.log('aux', aux);
+      // console.log('aux', aux);
       aux.subscribe((data:any)=>{
-        console.log(data);
+        if (data !== null) {
+          this.alerts.showAlerts('Registro Con Exito!', 'success', 'Ahora puede acceder a su cuenta.');
+        }else{
+          this.alerts.showAlerts('Ups!', 'error', 'Revisa bien los campos');
+        }
       })
     }
 
