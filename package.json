@@ -1,16 +1,17 @@
 {
   "name": "karan-front",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.3.0",
+    "npm": "7.16.0"
+  },
   "scripts": {
     "ng": "ng",
     "start:prod": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "engines": {
-    "node": "16.3.0",
-    "npm": "7.16.0"
+    "test": "ng test",
+    "heroku-postbuild": "ng build --configuration=production"
   },
   "private": true,
   "dependencies": {
