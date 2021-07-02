@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {apiKaran} from "Karan-Front/src/environments/environment";
+import {apiKaran} from "./Karan-Front/src/environments/environment";
 import {Observable} from "rxjs";
 
 @Injectable({
