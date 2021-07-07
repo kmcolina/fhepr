@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('./dist/frontkaran'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/frontkaran/'}),
+    res.sendFile('index.html', {root: 'src'}),
 );
 
 
