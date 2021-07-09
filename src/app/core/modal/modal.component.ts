@@ -22,7 +22,7 @@ export class ModalComponent implements OnInit {
       user: [''],
       password: [''],
     })
-     this.router.navigateByUrl('/index')
+     //this.router.navigateByUrl('/index')
   }
  
 
