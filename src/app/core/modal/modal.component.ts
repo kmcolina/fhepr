@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from 'ng-uikit-pro-standard';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -15,13 +15,20 @@ export class ModalComponent implements OnInit {
     public modalRef: MDBModalRef,
     private fB: FormBuilder,
     // private formBuilder: FormBuilder,
+    private router: Router,
               ) {
     this.loginForm = fB.group({
-      mail: [''],
+      user: [''],
       password: [''],
     })
   }
+ 
 
   ngOnInit(): void { }
 
+
+  logearse(){
+
+    this.router.navigateByUrl('/index');
+  }
 }
