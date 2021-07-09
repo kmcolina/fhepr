@@ -13,14 +13,16 @@ export class ModalComponent implements OnInit {
 
   constructor(
     public modalRef: MDBModalRef,
+    private router: Router,
     private fB: FormBuilder,
     // private formBuilder: FormBuilder,
-    private router: Router,
+    
               ) {
     this.loginForm = fB.group({
       user: [''],
       password: [''],
     })
+     this.router.navigateByUrl('/index')
   }
  
 
@@ -29,6 +31,6 @@ export class ModalComponent implements OnInit {
 
   logearse(){
 
-    this.router.navigateByUrl('/index');
+    this.router.navigateByUrl('/index')
   }
 }
